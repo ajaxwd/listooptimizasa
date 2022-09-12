@@ -2,7 +2,8 @@ import React from 'react'
 import { 
   View, 
   Text, 
-  Modal 
+  Modal, 
+  Button
 } from 'react-native';
 import { styles } from './style';
 

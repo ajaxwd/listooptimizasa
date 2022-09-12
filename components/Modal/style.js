@@ -19,4 +19,9 @@ export const styles = StyleSheet.create({
     modalMessage: {
       fontSize: 14,
     },
+    buttonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        marginHorizontal: 20,
+    },
 })

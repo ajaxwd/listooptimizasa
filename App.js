@@ -51,7 +51,7 @@ export default function App() {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.title}>Agregar producto</Text>
       <AddItem 
         addItem={addItem} 
@@ -74,6 +74,10 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
   title: {
     paddingTop: 35,
     color: 'green',
@@ -95,7 +99,10 @@ const styles = StyleSheet.create({
     shadowOffset: {
       width: 0,
       height: 2,
-    }
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   item: {
     fontSize: 16,
