@@ -5,6 +5,7 @@ import {
   Input, 
 } from '../Common'
 import { styles } from './style';
+import { screen } from '../../utils'
 
 export function AddItem({ 
   addItem, 
@@ -13,7 +14,7 @@ export function AddItem({
   return (
     <View style={styles.inputContainer}>
       <Btn
-        textButton='ADD'
+        textButton={screen.home.btnAddItem}
         addItem={addItem}  
         color='#EFBC9B'    
       />

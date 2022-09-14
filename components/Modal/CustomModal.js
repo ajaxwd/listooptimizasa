@@ -6,6 +6,7 @@ import {
   Button
 } from 'react-native';
 import { styles } from './style';
+import { screen } from '../../utils'
 
 export function CustomModal({
   onHandleDeleteItem,
@@ -23,25 +24,25 @@ export function CustomModal({
       onRequestClose={onRequestClose}
     >
       <View style={styles.modalContainer}>
-      <Text style={styles.modalTitle}>Detalle de la lista</Text>
+        <Text style={styles.modalTitle}>{screen.modal.title}</Text>
       </View>
       <View style={styles.modalMessageContainer}> 
-      <Text style={styles.modalMessage}>¿Estas seguro de que quieres eliminar?</Text>
+        <Text style={styles.modalMessage}>{screen.modal.message}</Text>
       </View>
       <View style={styles.modalMessageContainer}> 
-      <Text style={styles.selectedTask}>{selectedTask?.value}</Text>
+        <Text style={styles.selectedTask}>{selectedTask?.value}</Text>
       </View>
       <View style={styles.buttonContainer}>
-      <Button 
-        title='Eliminar'
-        onPress={() => onHandleDeleteItem(selectedTask?.id)}
-        color='#4A306D'
-        />
-      <Button 
-        title='Cancelar'
-        onPress={() => setModalVisible(!modalVisible)}
-        color='#cccccc'
-        />
+        <Button 
+          title={screen.modal.btnDelete}
+          onPress={() => onHandleDeleteItem(selectedTask?.id)}
+          color='#4A306D'
+          />
+        <Button 
+          title={screen.modal.btnCancel}
+          onPress={() => setModalVisible(!modalVisible)}
+          color='#cccccc'
+          />
       </View>
     </Modal>
   )
